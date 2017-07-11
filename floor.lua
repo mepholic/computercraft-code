@@ -4,6 +4,8 @@ term.setCursorPos(1,1)
 local cpu_label = os.getComputerLabel()
 local owner, eid, level = string.match(cpu_label, "(%a+)-e(%d)f(%d)")
 
+level = tonumber(level)
+
 print("Starting up Elevator ".. eid .." Level ".. level .."!")
  
 local modem = peripheral.wrap("back")

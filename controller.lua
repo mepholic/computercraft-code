@@ -26,10 +26,10 @@ while true do
    print("7: ")
    print("8: ")
    term.setCursorPos(15, 1)
-   local dest = read()
+   local dest = tonumber(read())
 
    -- Process user input
-   if tonumber(dest) ~= nil and dest >= 0 then
+   if dest ~= nil and dest >= 0 then
       reset_term()
       print("Activating elevator floor ".. dest ..".")
       modem.transmit(10, 9249, dest)
